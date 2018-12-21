@@ -1,5 +1,3 @@
-# N x N board with N queens
-N = 4
 
 def isSafe (board, row, col):
     # check left row
@@ -35,13 +33,11 @@ def generateSolution(board, col):
     # backtrack
     return False
 
+
+N = int(input())
 startCol = 0
-board = [
-    [0,0,0,0],
-    [0,0,0,0],
-    [0,0,0,0],
-    [0,0,0,0]
-]
+board = [[0 for i in range(N)] for j in range(N)]
+# print(board)
 
 if generateSolution(board, startCol) == False:
     print("No Solution Exists")
